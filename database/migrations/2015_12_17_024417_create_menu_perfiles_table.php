@@ -13,9 +13,9 @@ class CreateMenuPerfilesTable extends Migration
     public function up()
     {
         Schema::create('menu_perfiles', function (Blueprint $table) {
-            $table->increments('id_persona');
+            $table->increments('id_menu_perfil');
             $table->integer('user_id');
-            $table->integer('mperfil_act');
+            $table->integer('menu_perfil_act');
             $table->integer('menu_id')->unsigned();
             $table->integer('perfil_user_id')->unsigned();
             $table->timestamps();
