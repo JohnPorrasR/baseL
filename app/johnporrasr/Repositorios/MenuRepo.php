@@ -17,7 +17,7 @@ class MenuRepo extends BaseRepo
 
     public function getMenuSuperior()
     {
-        $menu = Menu::where('part_menu', '=', 'principal')->with('menuPerfil', 'menu_perfiles.perfilUser')->get();
+        $menu = Menu::where('part_menu', '=', 'principal')->with('menuPerfil')->get();
         dd($menu->toArray());
     }
 }
